@@ -1,7 +1,8 @@
 <template>
     <main>
+        <RicercaMusica @SelezionaGenere="genere"/>
         <div id="background_copertine">
-          <DiscCard
+            <DiscCard
             v-for="(item, index) in album" :key="index"
             :discDescription="item"
           />
@@ -12,7 +13,7 @@
 <script>
 import axios from "axios"
 import DiscCard from "./DiscCard.vue";
-
+import RicercaMusica from "./RicercaMusica.vue";
 
 export default {
     name: "myMain",
@@ -33,7 +34,8 @@ export default {
         });
     },
     components: { 
-      DiscCard 
+      DiscCard,
+      RicercaMusica 
     }
 }
 </script>
