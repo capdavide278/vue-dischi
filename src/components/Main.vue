@@ -78,5 +78,11 @@ main{
   margin: auto;
 }
 
+#loader{
+    color: white;
+    font-size: 50px;
+    margin-left: 45%;
+}
+
 </style>
  
