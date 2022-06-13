@@ -1,9 +1,9 @@
 <template>
     <main>
-        <RicercaMusica @SelezionaGenere="genere"/>
+        <RicercaMusica @selection="changeAlbum"/>
         <div id="background_copertine">
             <DiscCard
-            v-for="(item, index) in album" :key="index"
+            v-for="(item, index) in filteredAlbum" :key="index"
             :discDescription="item"
           />
         </div>
@@ -17,10 +17,15 @@ import RicercaMusica from "./RicercaMusica.vue";
 
 export default {
     name: "myMain",
+    components: { 
+        DiscCard,
+        RicercaMusica 
+    },
     data() {
         return {
             apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
-            album: []
+            album: [],
+            selezionato : ''
         };
     },
     created() {
@@ -33,9 +38,21 @@ export default {
             console.log("Errore", error);
         });
     },
-    components: { 
-      DiscCard,
-      RicercaMusica 
+    computed : {
+        filteredAlbum(){
+            if(this.selezionato === 'all'){
+                return this.album
+            }
+            return this.album.filter((item) => {
+                return item.genre.includes(this.selezionato)
+            })
+        }
+    },
+
+    methods: {
+        changeAlbum(selezione){
+            this.selezionato = selezione;
+        }
     }
 }
 </script>

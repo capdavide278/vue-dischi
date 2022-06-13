@@ -1,11 +1,11 @@
 <template>
     <div>
-        <select name="Seleziona genere" id="musica" @click.prevent = "$emit('SelezionaGenere', userText)" v-model="userText">
+        <select name="Seleziona genere" id="musica" @click.prevent = "$emit('selection', userText)" v-model="userText">
             <option value="all">Tutti</option>
-            <option value="rock">Rock</option>
-            <option value="pop">Pop</option>
-            <option value="metal">Metal</option>
-            <option value="jazz">Jazz</option>
+            <option value="Rock">Rock</option>
+            <option value="Pop">Pop</option>
+            <option value="Metal">Metal</option>
+            <option value="Jazz">Jazz</option>
         </select>
     </div>
 </template>

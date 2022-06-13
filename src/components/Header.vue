@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img src="../assets/Spotify_App_Logo.svg.png" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/768px-Spotify_logo_without_text.svg.png" alt="">
     </header>
 </template>
 
@@ -19,8 +19,9 @@ header{
     background-color: #2e3a46;
     height: 80px;
     img{
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 50px;
+        padding-top: 15px;
 
     }
 }
