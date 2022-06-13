@@ -7,6 +7,7 @@
             <option value="Metal">Metal</option>
             <option value="Jazz">Jazz</option>
         </select>
+    
     </div>
 </template>
 
