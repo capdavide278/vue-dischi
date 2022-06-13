@@ -61,7 +61,7 @@ export default {
 <style scoped lang="scss">
 main{
     background-color: #1e2d3b;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 #background_copertine{
