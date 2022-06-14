@@ -47,10 +47,10 @@ export default {
     computed : {
         filteredAlbum(){
             if(this.selezionato === 'all'){
-                return this.album
+                return this.album;
             }
             return this.album.filter((item) => {
-                return item.genre.includes(this.selezionato)
+                return item.genre === (this.selezionato);
             })
         },
     },
